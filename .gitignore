@@ -1,6 +1,8 @@
 #*  
+.vscode
 env
 __pycache__
 
 #TODO:
 .env
+db.sqlite3
