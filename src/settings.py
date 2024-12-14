@@ -9,7 +9,7 @@ SECRET_KEY = getenv('SECRET_KEY')
 
 DEBUG = bool(getenv('DEBUG'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = getenv("ALLOWED_HOST").split(" ")
 
 
 INSTALLED_APPS = [
@@ -92,4 +92,4 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }   
 
-CORS_ORIGIN_WHITELIST = []
+CORS_ORIGIN_WHITELIST = getenv("CORS_ORIGIN_WHITELIST").split(" ")
